@@ -1,8 +1,10 @@
 package com.example.androidstudies.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -149,10 +151,21 @@ fun Login() {
                 unfocusedLabelColor = color
             )
         )
-
-
+        Button(onClick = {},
+            modifier = Modifier
+                .size(40.dp)
+                .padding(horizontal = 150.dp, vertical = 10.dp),
+            shape = CircleShape,
+            contentPadding = PaddingValues(10.dp),
+            border = BorderStroke(
+                2.dp,
+                MaterialTheme.colors.primary
+            )
+        ) {
+            Text(text = "Login")
+            
+        }
     }
-
 }
 
 @Preview(showBackground = true)
@@ -160,6 +173,5 @@ fun Login() {
 fun LoginPrev() {
     AndroidStudiesTheme {
         Login()
-
     }
 }
